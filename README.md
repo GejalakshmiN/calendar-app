@@ -1,70 +1,169 @@
-# Getting Started with Create React App
+# Interactive Calendar Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A polished and interactive calendar component built using React, inspired by a physical wall calendar design.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+* Wall Calendar UI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  * Hero image section with month theme
+  * Clean and aesthetic layout inspired by real calendars
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Month Navigation
 
-### `npm test`
+  * Navigate between months and years seamlessly
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Day Range Selection
 
-### `npm run build`
+  * Select start and end dates
+  * Visual highlighting for:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    * Start date
+    * End date
+    * Dates in between
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Today Highlight
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  * Automatically highlights the current date
 
-### `npm run eject`
+* Holiday Indicators
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  * Small dot markers for special dates
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Notes Section
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  * Add notes for:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    * Entire month
+    * Selected date range
 
-## Learn More
+* Dark Mode
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  * Toggle between light and dark themes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Responsive Design
 
-### Code Splitting
+  * Works on desktop and mobile devices
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* React (Functional Components and Hooks)
+* JavaScript (ES6)
+* CSS (Custom styling)
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Project Structure
 
-### Advanced Configuration
+```
+src/
+├── components/
+│   ├── Calendar.jsx
+│   ├── Header.jsx
+│   ├── HeroSection.jsx
+│   ├── CalendarGrid.jsx
+│   ├── DayCell.jsx
+│   ├── Notes.jsx
+│
+├── data/
+│   └── constants.js
+│
+├── utils/
+│   └── dateUtils.js
+│
+├── styles/
+│   └── calendar.css
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## How to Run Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Clone the repository:
 
-### `npm run build` fails to minify
+```
+git clone https://github.com/your-username/calendar-app.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+2. Navigate to the project folder:
+
+```
+cd calendar-app
+```
+
+3. Install dependencies:
+
+```
+npm install
+```
+
+4. Start the development server:
+
+```
+npm start
+```
+
+5. Open in your browser:
+
+```
+http://localhost:3000
+```
+
+---
+
+## Key Design Decisions
+
+### Component-Based Architecture
+
+The application is divided into reusable components to improve readability and maintainability.
+
+### State Management
+
+React hooks (`useState`) are used to manage:
+
+* Selected date range
+* Month and year navigation
+* Dark mode
+
+### Separation of Concerns
+
+* Logic is placed in `utils/`
+* Static data is stored in `data/`
+* UI components are organized in `components/`
+
+### User Experience
+
+* Clear visual feedback for selections
+* Smooth and intuitive interactions
+* Clean and minimal interface
+
+---
+
+## Future Improvements
+
+* Persist notes using localStorage
+* Add animations for month transitions and range selection
+* Add event/reminder support
+* Integrate real holiday APIs
+
+---
+
+## Demo
+
+(Add your deployed link here)
+
+---
+
+## Demo Video
+
+(Add your Loom or YouTube link here)
+
+---
+
+## Acknowledgment
+
+This project was built as part of a frontend engineering challenge to demonstrate UI/UX design, React development skills, and component architecture.

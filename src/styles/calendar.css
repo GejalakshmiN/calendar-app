@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500&display=swap');
+
+/* ================= BASE ================= */
+body {
+  margin: 0;
+  background: #eae6df;
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.3s ease;
+}
+
+/* ================= CARD ================= */
+.calendar-card {
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #fdfaf5;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+/* ================= SPIRAL ================= */
+.spiral {
+  background: #e5dccf;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.spiral div {
+  width: 10px;
+  height: 10px;
+  background: #bfb6a5;
+  border-radius: 50%;
+}
+
+/* ================= LAYOUT ================= */
+.layout {
+  display: flex;
+}
+
+/* ================= HERO ================= */
+.hero {
+  width: 320px;
+  height: 460px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, transparent 35%, #0f3d2eee);
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  color: white;
+}
+
+.hero-text span {
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin: 5px 0;
+}
+
+.hero-text p {
+  font-size: 16px;
+}
+
+/* ================= RIGHT ================= */
+.right {
+  flex: 1;
+  padding: 30px;
+}
+
+/* ================= HEADER ================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  font-family: 'Playfair Display', serif;
+  color: #1f2937;
+}
+
+/* ================= DAYS ================= */
+.days {
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* ================= GRID ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  gap: 6px;
+  margin-top: 10px;
+}
+
+/* ================= DAY ================= */
+.day {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #1f2937;
+  transition: all 0.2s ease;
+}
+
+.day:hover {
+  background: #ecfdf5;
+  transform: scale(1.05);
+}
+
+/* ================= RANGE ================= */
+.range {
+  background: #d1fae5;
+}
+
+/* ================= START ================= */
+.start {
+  border: 2px solid #22c55e;
+  background: #ecfdf5;
+}
+
+/* ================= END ================= */
+.end {
+  background: #22c55e;
+  color: white;
+}
+
+/* ================= NOTES ================= */
+.notes {
+  margin-top: 20px;
+}
+
+.notes textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: #f3efe8;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* ================= DARK MODE ================= */
+.dark {
+  background: #020617;
+  min-height: 100vh;
+}
+
+/* Card */
+.dark .calendar-card {
+  background: #1e293b;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+}
+
+/* Spiral */
+.dark .spiral {
+  background: #334155;
+}
+
+.dark .spiral div {
+  background: #64748b;
+}
+
+/* Header */
+.dark .header h2 {
+  color: #e2e8f0;
+}
+
+/* Days */
+.dark .days {
+  color: #94a3b8;
+}
+
+/* Day */
+.dark .day {
+  color: #e2e8f0;
+}
+
+.dark .day:hover {
+  background: #334155;
+}
+
+/* Range */
+.dark .range {
+  background: #064e3b;
+}
+
+/* Start */
+.dark .start {
+  border: 2px solid #22c55e;
+  background: #022c22;
+}
+
+/* End */
+.dark .end {
+  background: #22c55e;
+  color: black;
+}
+
+/* Notes */
+.dark .notes textarea {
+  background: #334155;
+  color: white;
+  border: 1px solid #475569;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:700px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .hero {
+    width: 100%;
+    height: 220px;
+  }
+}
+/* TODAY highlight */
+.today {
+  border: 2px solid #22c55e;
+  font-weight: 600;
+}
+
+.range-info {
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #d1fae5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #065f46;
+  font-size: 14px;
+}
+.day {
+  position: relative; /* REQUIRED for dot */
+}
+
+.holiday-dot {
+  width: 5px;
+  height: 5px;
+  background: #22c55e;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 4px;
+}
