@@ -135,35 +135,3 @@ React hooks (`useState`) are used to manage:
 * Static data is stored in `data/`
 * UI components are organized in `components/`
 
-### User Experience
-
-* Clear visual feedback for selections
-* Smooth and intuitive interactions
-* Clean and minimal interface
-
----
-
-## Future Improvements
-
-* Persist notes using localStorage
-* Add animations for month transitions and range selection
-* Add event/reminder support
-* Integrate real holiday APIs
-
----
-
-## Demo
-
-(Add your deployed link here)
-
----
-
-## Demo Video
-
-(Add your Loom or YouTube link here)
-
----
-
-## Acknowledgment
-
-This project was built as part of a frontend engineering challenge to demonstrate UI/UX design, React development skills, and component architecture.
